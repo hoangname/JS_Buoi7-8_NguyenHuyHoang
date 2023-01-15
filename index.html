@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <title>BT JS B78</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container" style="margin-top: 50px; margin-bottom: 100px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <input type="number" class="form-control" id="nhapSo" placeholder="Nhập số n">
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary" id="btnNhapSo">Thêm số</button>
+          <button class="btn btn-danger ml-4" id="undo">Undo</button>
+          <button class="btn btn-info ml-4" id="redo">Redo</button>
+          <button class="btn btn-warning ml-4" id="resetArray">Reset</button>
+          <button class="btn btn-success ml-4" id="undoReset">Undo Reset</button>
+        </div>
+      </div>
+      <div class="alert alert-success mt-3" id="arrayNumber">Mảng số: </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <!-- /Bài1 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 22px;">
+              Bài 1: Tổng các số dương trong mảng
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB1">Tính tổng</button>
+              <div class="alert alert-success mt-3" id="ketQuaB1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài1 -->
+      <!-- /Bài2 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 22px;">
+              Bài 2: Đếm số dương
+            </button>
+          </h2>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB2">Đếm số</button>
+              <div class="alert alert-success mt-3" id="ketQuaB2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài2 -->
+      <!-- /Bài3 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 22px;">
+              Bài 3: Tìm số nhỏ nhất
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB3">Tìm số nhỏ nhất</button>
+              <div class="alert alert-success mt-3" id="ketQuaB3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài3 -->
+      <!-- /Bài4 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 22px;">
+              Bài 4: Tìm số dương nhỏ nhất
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB4">Tìm số dương nhỏ nhất</button>
+              <div class="alert alert-success mt-3" id="ketQuaB4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài4 -->
+      <!-- /Bài5 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" style="font-size: 22px;">
+              Bài 5: Tìm số chẵn cuối cùng
+            </button>
+          </h2>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB5">Tìm số chẵn cuối cùng</button>
+              <div class="alert alert-success mt-3" id="ketQuaB5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài5 -->
+      <!-- /Bài6 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse6" aria-expanded="false" aria-controls="collapse6" style="font-size: 22px;">
+              Bài 6: Đổi chỗ
+            </button>
+          </h2>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-6">
+                  <input class="form-control" type="number" id="add1B6" placeholder="Nhập số vị trí 1">
+                </div>
+                <div class="col-6">
+                  <input class="form-control" type="number" id="add2B6" placeholder="Nhập số vị trí 2">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB6">Đổi chỗ</button>
+              <div class="alert alert-success mt-3" id="ketQuaB6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài6 -->
+      <!-- /Bài7 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading7">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse7" aria-expanded="false" aria-controls="collapse7" style="font-size: 22px;">
+              Bài 7: Sắp xếp tăng dần
+            </button>
+          </h2>
+        </div>
+        <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB7">Sắp xếp</button>
+              <div class="alert alert-success mt-3" id="ketQuaB7"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài7 -->
+      <!-- /Bài8 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading8">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse"
+              data-target="#collapse8" aria-expanded="false" aria-controls="collapse8" style="font-size: 22px;">
+              Bài 8: Tìm số nguyên tố đầu tiên
+            </button>
+          </h2>
+        </div>
+        <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB8">Tìm số nguyên tố đầu tiên</button>
+              <div class="alert alert-success mt-3" id="ketQuaB8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài8 -->
+      <!-- /Bài9 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading9">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9" style="font-size: 22px;">
+              Bài 9: Đếm số nguyên
+            </button>
+          </h2>
+        </div>  
+        <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <input class="form-control" id="nhapSoB9" type="number" placeholder="Nhập số">
+                  </div>
+                  <div class="col-6">
+                    <button class="btn btn-primary" id="btnNhapSoB9">Thêm số</button>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert-success" id="arrayB9"></div>
+              <button class="btn btn-primary" id="btnB9" >Đếm số nguyên</button>
+              <div class="alert alert-success mt-3" id="ketQuaB9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài9 -->
+      <!-- /Bài10 -->
+      <div class="card">
+        <div class="card-header p-0 mb-3 " style="border: 0;" id="heading10">
+          <h2 class="mb-0">
+            <button class="btn btn-block btn-info text-left" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10" style="font-size: 22px;">
+              Bài 10: So sánh số lượng số âm và số dương
+            </button>
+          </h2>
+        </div>  
+        <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+          <div class="card-body p-0 py-3 mx-4">
+            <div class="form-group">
+              <button class="btn btn-primary" id="btnB10" >So sánh</button>
+              <div class="alert alert-success mt-3" id="ketQuaB10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Bài10 -->
+
+
+
+
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
